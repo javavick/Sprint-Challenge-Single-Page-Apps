@@ -23,8 +23,6 @@ export default function CharacterList() {
     //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
   }, []);
 
-  console.log(characters);
-
   const Section = styled.section`
     display: flex;
     flex-wrap: wrap;
