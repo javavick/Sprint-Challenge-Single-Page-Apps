@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import styled from "styled-components";
 import CharacterCard from "./CharacterCard.js";
 
 export default function CharacterList() {
@@ -24,11 +25,19 @@ export default function CharacterList() {
 
   console.log(characters);
 
+  const Section = styled.section`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: black;
+    color: white;
+  `;
+
   return (
-    <section className="character-list">
+    <Section className="character-list">
       {characters.map((index) => (
         <CharacterCard character={index} />
       ))}
-    </section>
+    </Section>
   );
 }
