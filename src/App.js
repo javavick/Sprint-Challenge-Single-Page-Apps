@@ -7,6 +7,8 @@ import CharacterSingle from "./components/CharacterSingle.js";
 import CharacterList from "./components/CharacterList.js";
 import SearchForm from "./components/SearchForm.js";
 import ErrorPage from "./components/ErrorPage.js";
+import LocationsList from "./components/LocationsList";
+import EpisodeList from "./components/EpisodeList.js";
 
 export default function App() {
   const [characters, setCharacters] = useState([]);
@@ -46,6 +48,8 @@ export default function App() {
       />
       <Route exact path="/characters/:id" component={CharacterSingle} />
       <Route path="/error" component={ErrorPage} />
+      <Route path="/locations" component={LocationsList} />
+      <Route path="/episodes" component={EpisodeList} />
     </main>
   );
 }

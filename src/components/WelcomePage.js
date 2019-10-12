@@ -7,7 +7,7 @@ const Header = styled.header`
   background-color: black;
   color: white;
   padding-top: 20px;
-  height: 400px;
+  height: 500px;
 `;
 
 const Img = styled.img`
@@ -31,7 +31,19 @@ export default function WelcomePage() {
         />
         <br />
         <Link to="/characters">
-          <Span>Click Here for a List of Rick and Morty Characters</Span>
+          <Span>Click Here for a List of Characters</Span>
+        </Link>
+        <br />
+        <br />
+        <br />
+        <Link to="/locations">
+          <Span>Click Here for a List of Locations</Span>
+        </Link>
+        <br />
+        <br />
+        <br />
+        <Link to="/episodes">
+          <Span>Click Here for a List of Episodes</Span>
         </Link>
       </Header>
     </section>
