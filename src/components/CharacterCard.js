@@ -21,7 +21,7 @@ const H1 = styled.h1`
 
 export default function CharacterCard({ character }) {
   return (
-    <Div>
+    <Div key={character.id}>
       <Link to={`/characters/${character.id}`} key={character.id}>
         <Img src={character.image} alt={character.name} />
         <H1>{character.name}</H1>

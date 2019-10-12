@@ -3,26 +3,7 @@ import axios from "axios";
 import styled from "styled-components";
 import CharacterCard from "./CharacterCard.js";
 
-export default function CharacterList() {
-  const [characters, setCharacters] = useState([]);
-
-  useEffect(() => {
-    function getRequest() {
-      axios
-        .get("https://rickandmortyapi.com/api/character/")
-        .then((response) => {
-          console.log(response);
-          setCharacters(response.data.results);
-        })
-        .catch((error) => {
-          console.log(`Error: ${error}`);
-        });
-    }
-
-    getRequest();
-    //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
-  }, []);
-
+export default function CharacterList({ characters }) {
   const Section = styled.section`
     display: flex;
     flex-wrap: wrap;
