@@ -1,16 +1,22 @@
 import React, { useEffect, useState } from "react";
+import axios from "axios";
+import styled from "styled-components";
+import CharacterCard from "./CharacterCard.js";
 
-export default function CharacterList() {
-  // TODO: Add useState to track data from useEffect
-
-  useEffect(() => {
-    // TODO: Add API Request here - must run in `useEffect`
-    //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
-  }, []);
+export default function CharacterList({ characters }) {
+  const Section = styled.section`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: black;
+    color: white;
+  `;
 
   return (
-    <section className="character-list">
-      <h2>TODO: `array.map()` over your state here!</h2>
-    </section>
+    <Section className="character-list">
+      {characters.map((index) => (
+        <CharacterCard character={index} />
+      ))}
+    </Section>
   );
 }
